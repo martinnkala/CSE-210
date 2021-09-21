@@ -118,11 +118,13 @@ while True:
         break
     if not check_input(user_input):
         print('Please try again.')
+        turns = turns
         continue
     user_input = int(user_input) - 1
     coords = coordinates(user_input)
     if istaken(coords, board):
         print('Please try again.')
+        turns = turns
         continue
     add_to_board(coords, board, active_user)
 
